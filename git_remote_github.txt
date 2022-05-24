@@ -1,0 +1,71 @@
+https://pacroy.medium.com/learn-git-within-7-minutes-and-play-around-with-it-91b65fc8e6ca
+Above link has all steps 
+
+
+1. you want to push your local repository into your remote repository so someone else can work on your files. First thing, you need to create a new repository on GitHub (Sign up first if you don’t have an account yet.).
+
+Click on New Repository on Git Hub link + dropdown
+
+2. Input your repository name and click Create repository
+a. fill repo name 
+b. public
+c. NOne for all other options 
+d. create repo 
+
+3. Copy your Git repository URL // ssh url 
+4.  Issue below cmd at your local repo 
+git remote add origin https://github.com/pacroy/demo-git.git
+
+5. Try this cmd 
+#git remote
+origin
+
+6. Try 
+#git checkout master
+
+7.push files to your remote Git repository 
+#git push --set-upstream origin master
+
+
+8. git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+
+9.Try to make some changes on GitHub.
+
+10. Use command git fetch to get the latest data from remote repository
+#git fetch 
+
+
+11.use command git status again now, you will see that your local repository is now behind your remote repository
+#git status
+
+
+12. Use command git pull to load all changes from remote repository to your local repository.
+
+#git pull
+
+=================
+
+SSH KEY IN GIT HUB
+
+
+https://opensource.com/life/16/7/creating-your-first-git-repository
+================
+
+Cloning the repository is no different than usual, but obtaining permission to write back into that repository on GitHub is slightly more complex, because in order to authenticate to GitHub you must have an SSH key. If you're on Linux, create one with this command:
+
+$ ssh-keygen
+
+Then copy your new key, which is plain text. You can open it in a plain text editor, or use the cat command:
+
+$ cat ~/.ssh/id_rsa.pub
+
+Now paste your key into GitHub's SSH configuration,  or your GitLab configuration.
+
+As long as you clone your GitHub project via SSH, you'll be able to write back to your repository.
+
+Alternately, you can use GitHub's file uploader interface to add files without even having Git on your system.
+
+
