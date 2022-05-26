@@ -1,0 +1,21 @@
+TO search a string
+
+grep -rnw '/path/to/somewhere/' -e 'pattern'
+
+find . -name testfile.txt // plain name
+
+find . -name '*pod*.rpm'  // regular expr
+
+   find . -type f -empty   	   Find   an empty file within the current directory.  
+
+  find /home -user exampleuser -mtime 7 -iname   ".db" 
+
+#Find all .db files   (ignoring text case) modified in the last 7 days by a user named exampleuser. 
+
+"du -sch"
+
+" top "   press c to sort press q to quit 
+
+add this arg also
+
+ssh -oStrictHostKeyChecking=no
