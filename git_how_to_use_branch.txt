@@ -1,0 +1,40 @@
+git checkout ZTCORE-4936 #working branch
+
+# UPDATE local master with remote master changes 
+ git checkout master
+ git pull
+ git status
+ git log
+
+# rebase  local branch  with remote master changes 
+git checkout ZTCORE-4936
+git rebase master
+# will show conflict at files , fix them and add fixed file to git 
+vi packaging/packaging.yml 
+ git status
+ git add packaging/packaging.yml 
+git status
+git rebase --continue
+# will show conflict at files , fix them and add fixed file to git 
+git status
+git push -f origin ZTCORE-4936
+git status
+
+# how to reset recent commits hard 
+git log
+git diff
+git reset --hard d42d2f161d11d5e059f8b6cd86202e48e911a8f2
+
+
+# how to commit 
+git diff
+git add Os_Hardening/http/user-data 
+git commit -ammend -m "any meaasge to change previous commit message"
+git diff
+git status
+git push origin BRANCH-NAME
+git push -f origin ZTCORE-4936
+
+
+
+

@@ -16,4 +16,4 @@ $ which p4
  $ p4 opened
  $ p4 change --> create a change set from the pending change
  $ p5 descr -du 6270117 >/tmp/1
- $  p4 submit -c 6270117  
+ $ p4 submit -c 6270117  

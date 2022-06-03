@@ -1,0 +1,30 @@
+alias docker=/a/docker/bin/docker
+tail -f /var/log/ztcore/bootstrapper.log 
+
+
+#DOCKER cmds
+docker ps -a
+docker rm -f $(docker ps -a -q)
+docker ps | grep location
+docker images
+docker image rm df030668b000(docker id)
+docker-compose -f /mnt/ztcore-ramfs/docker-compose/docker-compose.yml up
+docker-compose -f /mnt/ztcore-ramfs/docker-compose/docker-compose.yml down 
+
+LOGS
+===
+docker logs --tail=10 -f connector
+docker logs -f connector
+
+RESTART SERVICES 
+=============
+docker restart mqtt-server
+
+Bluecat LDAP docker service 
+========================
+
+docker run -p 3389:389 --name bluecat --env LDAP_ORGANISATION="Bluecat" --hostname bluecat.local --env LDAP_DOMAIN="bluecat.local" --env LDAP_ADMIN_PASSWORD="Ztdss123$" --detach osixia/openldap
+aacc5bb84a301cec7be52540f863902188e9e331c271792a65a2bea254e00a1c
+
+
+blr-mpm4n:src aalva$ docker run -p 8080:80 --name bluecat-admin --hostname ldap.bluecat.local --link bluecat:bluecat.local --env PHPLDAPADMIN_LDAP_HOSTS=bluecat.local --env PHPLDAPADMIN_HTTPS=false --detach osixia/phpldapadmin
