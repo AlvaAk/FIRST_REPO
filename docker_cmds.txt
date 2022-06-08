@@ -1,5 +1,5 @@
 alias docker=/a/docker/bin/docker
-tail -f /var/log/ztcore/bootstrapper.log 
+tail -f /var/log/z/strapper.log 
 
 
 #DOCKER cmds
@@ -8,8 +8,8 @@ docker rm -f $(docker ps -a -q)
 docker ps | grep location
 docker images
 docker image rm df030668b000(docker id)
-docker-compose -f /mnt/ztcore-ramfs/docker-compose/docker-compose.yml up
-docker-compose -f /mnt/ztcore-ramfs/docker-compose/docker-compose.yml down 
+docker-compose -f /mnt/z-ramfs/docker-compose/docker-compose.yml up
+docker-compose -f /mnt/z-ramfs/docker-compose/docker-compose.yml down 
 
 LOGS
 ===
@@ -18,7 +18,7 @@ docker logs -f connector
 
 RESTART SERVICES 
 =============
-docker restart mqtt-server
+docker restart mq-server
 
 Bluecat LDAP docker service 
 ========================
