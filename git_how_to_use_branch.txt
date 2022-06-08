@@ -1,4 +1,4 @@
-git checkout ZTCORE-4936 #working branch
+git checkout E-4936 #working branch
 
 # UPDATE local master with remote master changes 
  git checkout master
@@ -7,7 +7,7 @@ git checkout ZTCORE-4936 #working branch
  git log
 
 # rebase  local branch  with remote master changes 
-git checkout ZTCORE-4936
+git checkout E-4936
 git rebase master
 # will show conflict at files , fix them and add fixed file to git 
 vi packaging/packaging.yml 
@@ -17,7 +17,7 @@ git status
 git rebase --continue
 # will show conflict at files , fix them and add fixed file to git 
 git status
-git push -f origin ZTCORE-4936
+git push -f origin E-4936
 git status
 
 # how to reset recent commits hard 
@@ -33,7 +33,7 @@ git commit -ammend -m "any meaasge to change previous commit message"
 git diff
 git status
 git push origin BRANCH-NAME
-git push -f origin ZTCORE-4936
+git push -f origin Z6
 
 
 
