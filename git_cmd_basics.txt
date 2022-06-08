@@ -1,0 +1,23 @@
+https://pacroy.medium.com/learn-git-within-7-minutes-and-play-around-with-it-91b65fc8e6ca
+
+
+mkdir FIRST_REPO
+cd FIRST_REPO/
+git init .
+touch a.txt
+git status
+git add a.txt
+git diff
+git status
+git log
+git reflog
+git reflog show HEAD
+git status
+vi a.txt 
+git diff
+git log
+git commit -m "1st master commit on a.txt"
+git log
+git status
+# to get git repo name at any time /any level 
+basename `git rev-parse --show-toplevel`

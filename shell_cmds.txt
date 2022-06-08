@@ -1,0 +1,2 @@
+alias docker=/a/docker/bin/docker
+tail -f /var/log/ztcore/bootstrapper.log 

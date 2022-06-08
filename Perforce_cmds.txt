@@ -1,0 +1,19 @@
+P4 commands
+$ which p4
+ $ which p5 (/build/apps/bin/p5)
+ $  p4 login
+ $ cat .p4config
+ $ p4 client
+ $ p4 sync
+ $ p4 sync ...
+ $ p4 sync -f ...
+ $ p4 help
+ $ p4 sync ...
+ $ p4 sync -f ...
+ $ p4 edit README
+ $ p4 diff
+ $ p4 diff -du
+ $ p4 opened
+ $ p4 change --> create a change set from the pending change
+ $ p5 descr -du 6270117 >/tmp/1
+ $ p4 submit -c 6270117  
