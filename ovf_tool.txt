@@ -1,7 +1,7 @@
 #!/bin/bash
-# This script deploys the connector on the ESXi machine 1.1.72.94.
+# This script deploys the connector on the ESXi machine 1.1.2.4.
 # Asks for the password, which is : Fpass
-ESXI="1.1.72.89"
+ESXI="1.1.2.4"
 USER=aalva-18.04-con9th
 TS=$(date -u +%d_%b_%H_%M)
 PASS=$(cat ./esxi-pass)
